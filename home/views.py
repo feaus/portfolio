@@ -17,7 +17,7 @@ def home(request):
             ['federicoauster@gmail.com'],
             fail_silently=False
         )
-        return HttpResponseRedirect(reverse("home-home"))
+        return HttpResponseRedirect(reverse("home"))
 
     context = {
 
