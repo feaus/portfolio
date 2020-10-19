@@ -1,4 +1,5 @@
 {% load static from static %}
+{% load i18n %}
 
 <!DOCTYPE HTML>
 <html>
@@ -15,27 +16,27 @@
         <section id="header">
             <header>
                 <h1>Federico Auster</h1>
-                <p>Desarrollador web</p>
+                <p>{% translate "Desarrollador web" %}</p>
             </header>
             <ul class="icons">
 				<li>
                     <a href="https://www.linkedin.com/in/feaus/" class="icon brands linkedin" target="_blank">
                         <span class="label">
-                            <img src="{% static 'logo_linkedin.png' %}" alt="">
+                            <img src="{% static 'logo_linkedin2.png' %}" alt="">
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/feaus" class="icon brands github" target="_blank">
                         <span class="label">
-                            <img src="{% static 'logo_github.png' %}" alt="">
+                            <img src="{% static 'logo_github2.png' %}" alt="">
                         </span>
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="icon brands github" target="_blank">
+                    <a href="#" class="icon brands resume" target="_blank">
                         <span class="label">
-                            <img src="{% static 'logo_github.png' %}" alt="">
+                            <img src="{% static 'logo_resume2.png' %}" alt="">
                         </span>
                     </a>
                 </li>
@@ -52,8 +53,8 @@
                 <h2>Sobre mí</h2>
             </header>
             <p>Soy un estudiante de Ciencias de la Computación en la UBA, y arquitecto recibido.<br/>
-            Mi objetivo es poder desarrollarme como programador, especialmente en el desarrollo web.<br/>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+            Es mi objetivo desarrollarme como programador, especialmente en el desarrollo web.<br/>
+            Disfruto mucho de los desafíos, ya que siempre se pueden aprender cosas nuevas de ellos.</p>
             <footer>
                 <a href="#project-1" class="button style2 scrolly">Ver proyectos</a>
             </footer>
@@ -97,8 +98,7 @@
                             <section class="widget thumbnails">
                                 <div class="grid">
                                     <div class="row gtr-50">
-                                        <div class="col-6"><a href="#header" class="image fit" target="_blank"><img src="/media/fauster.jpg"></a></div>
-<!--                                            TODO: change image-->
+                                        <div class="col-6"><a href="#header" class="image fit"><img src="/media/portfolio.jpg"></a></div>
                                     </div>
                                 </div>
                             </section>
@@ -127,7 +127,7 @@
                             <section class="widget thumbnails">
                                 <div class="grid">
                                     <div class="row gtr-50">
-                                        <div class="col-6"><a href="https://footballreservation.herokuapp.com/" class="image fit" target="_blank"><img src="/media/fauster.jpg"></a></div>
+                                        <div class="col-6"><a href="https://footballreservation.herokuapp.com/" class="image fit" target="_blank"><img src="/media/foot_res.jpg"></a></div>
 <!--                                            TODO: change image-->
                                     </div>
                                 </div>
@@ -177,21 +177,21 @@
 				<li>
                     <a href="https://www.linkedin.com/in/feaus/" class="icon brands linkedin" target="_blank">
                         <span class="label">
-                            <img src="{% static 'logo_linkedin.png' %}" alt="">
+                            <img src="{% static 'logo_linkedin2.png' %}" alt="">
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="https://github.com/feaus" class="icon brands github" target="_blank">
                         <span class="label">
-                            <img src="{% static 'logo_github.png' %}" alt="">
+                            <img src="{% static 'logo_github2.png' %}" alt="">
                         </span>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/feaus/" class="icon brands instagram" target="_blank">
                         <span class="label">
-                            <img src="{% static 'logo_instagram.png' %}" alt="">
+                            <img src="{% static 'logo_instagram2.png' %}" alt="">
                         </span>
                     </a>
                 </li>
