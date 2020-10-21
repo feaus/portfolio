@@ -3,8 +3,7 @@ z - external-folders/*
 media/*
 !media/.gitkeep
 
-static/*
-!static/.gitkeep
+static/main.css
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
