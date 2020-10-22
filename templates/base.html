@@ -96,14 +96,14 @@
                                     {{ art.text|safe }}
 
                                     {% if art.title == "Reserva de canchas de fútbol" %}
-                                        <a href="{{ art.live_view }}">> Visitar la página (en desarrollo)</a> <br>
+                                        <a href="{{ art.live_view }}" target="_blank">> Visitar la página (en desarrollo)</a> <br>
                                     {% elif art.title == "Página personal" %}
-                                        <a href="{{ art.live_view }}" class="unavailable">> Visitar la página</a> <br>
+                                        <a href="{{ art.live_view }}" class="unavailable" target="_blank">> Visitar la página</a> <br>
                                     {% else %}
-                                        <a href="{{ art.live_view }}">> Visitar la página</a> <br>
+                                        <a href="{{ art.live_view }}" target="_blank">> Visitar la página</a> <br>
                                     {% endif %}
 
-                                    <a href="{{ art.source_code }}">> Ver el código fuente</a>
+                                    <a href="{{ art.source_code }}" target="_blank">> Ver el código fuente</a>
                                 </section>
                             </div>
                         </div>
