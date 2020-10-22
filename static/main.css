@@ -80,7 +80,7 @@ input, select, textarea {
 
 	body {
 		background-color: #1e1c37;
-		background-image: url("/media/overlay.png"), url("/media/background2.jpg");
+		background-image: url("/static/overlay.png"), url("/static/background2.jpg");
 		background-repeat: repeat, no-repeat;
 		background-size: auto, cover;
 		background-position: top left, center 0;
@@ -1857,7 +1857,7 @@ input, select, textarea {
 			top: -4.5em;
 			margin-left: -45px;
 			margin-top: -33px;
-			background: url("/media/arrow.svg") no-repeat;
+			background: url("/static/arrow.svg") no-repeat;
 		}
 
 		.box :last-child {
@@ -2099,7 +2099,7 @@ input, select, textarea {
 				bottom: -4.5em;
 				margin-left: -45px;
 				margin-bottom: -33px;
-				background: url("/media/arrow.svg") no-repeat;
+				background: url("/static/arrow.svg") no-repeat;
 			}
 
 		body.is-preload #header {
@@ -2384,7 +2384,7 @@ input, select, textarea {
 
 			body {
 				background-color: #1e1c37;
-				background-image: url("/media/overlay.png"), url("/media/background2.jpg");
+				background-image: url("/static/overlay.png"), url("/static/background2.jpg");
 				background-repeat: repeat, no-repeat;
 				background-size: auto, cover;
 				background-position: top left, center;

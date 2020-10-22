@@ -37,7 +37,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="icon brands resume" target="_blank">
+                        <a href="https://drive.google.com/file/d/1_27IsCXQ9XYTI9ITgxHVUUE1DnWoVdw3/view?usp=sharing" class="icon brands resume" target="_blank">
                             <span class="label">
                                 <img src="{% static 'logo_resume2.png' %}" alt="">
                             </span>
@@ -61,36 +61,7 @@
                 </footer>
             </section>
 
-            <div id="main-wrapper">
-                <div id="project-1" class="container">
-                    <div class="row gtr-200">
-                        <div class="col-4 col-12-medium">
-                            <div id="sidebar">
-                                <section class="widget thumbnails">
-                                    <div class="grid">
-                                        <div class="row gtr-50">
-                                            <div class="col-6"><a href="https://fauster.herokuapp.com/" class="image fit" target="_blank"><img src="/media/fauster.jpg"></a></div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="col-8 col-12-medium imp-medium">
-                            <div id="content">
-                                <section class="last">
-                                    <h2>Portfolio personal de arquitectura</h2>
-                                    <p>Un proyecto personal de Django para mostrar mis trabajos como arquitecto. La página está compuesta por la homepage, con un field para enviar un email, un sector de blog, donde iré subiendo mis proyectos y sus procesos, y un sector "sobre mí" que se encuentra actualmente en desarrollo.</p>
-                                    <p>Las herramientas que se utilizaron para construir la web app son el framework de Django, HTML5 y CSS.</p>
-                                    <p>Esta app está hosteada en un plan gratuito de Heroku, lo que puede significar una demora en el tiempo de carga inicial de la página.</p>
-                                    <a href="https://fauster.herokuapp.com/">> Visitar la página</a> <br>
-                                    <a href="https://github.com/feaus/fauster.herokuapp.com/">> Ver el código fuente</a>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            {% for art in article %}
             <div id="main-wrapper">
                 <div class="container">
                     <div class="row gtr-200">
@@ -99,7 +70,7 @@
                                 <section class="widget thumbnails">
                                     <div class="grid">
                                         <div class="row gtr-50">
-                                            <div class="col-6"><a href="#header" class="image fit"><img src="/media/portfolio.jpg"></a></div>
+                                            <div class="col-6"><a href="{{ art.live_view }}" class="image fit" target="_blank"><img src="{{ art.image.url }}"></a></div>
                                         </div>
                                     </div>
                                 </section>
@@ -108,47 +79,25 @@
                         <div class="col-8 col-12-medium imp-medium">
                             <div id="content">
                                 <section class="last">
-                                    <h2>Página personal</h2>
-                                    <p>Una simple web app personal, construida en Django, para mostrar mis capacidades como desarrollador web. Está compuesta por una sola app, y con un field para enviar un email.</p>
-                                    <p>Las herramientas utilizadas son el framework de Django, HTML5 y CSS.</p>
-                                    <a href="#" class="unavailable">> Visitar la página</a> <br>
-                                    <a href="https://github.com/feaus/portfolio/">> Ver el código fuente</a>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                                    <h2>{{ art.title }}</h2>
+                                    {{ art.text|safe }}
 
-            <div id="main-wrapper">
-                <div class="container">
-                    <div class="row gtr-200">
-                        <div class="col-4 col-12-medium">
-                            <div id="sidebar">
-                                <section class="widget thumbnails">
-                                    <div class="grid">
-                                        <div class="row gtr-50">
-                                            <div class="col-6"><a href="https://footballreservation.herokuapp.com/" class="image fit" target="_blank"><img src="/media/foot_res.jpg"></a></div>
-                                        </div>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                        <div class="col-8 col-12-medium imp-medium">
-                            <div id="content">
-                                <section class="last">
-                                    <h2>Reserva de canchas de fútbol</h2>
-                                    <p>Se trata de un proyecto personal en desarrollo, y consiste en una web app para poder reservar canchas de fútbol online. La página permitirá a los propietarios de las canchas poder registrar sus clubes, sus canchas, y poder ingresar reservas manualmente. A su vez, los usuarios <i>jugadores</i>  podrán registrarse y reservar una cancha desde la app, y realizando el pago de la seña a través de Mercadopago, con tarjeta o con efectivo. El sistema realizará una reserva provisoria, hasta que el propietario de la cancha confirme que el pago en efectivo se concretó.</p>
-                                    <p>Este proyecto supone un desafío, desde el registro y loggeo de los usuarios, hasta verificaciones de seguridad, como por ejemplo que ningún usuario pueda realizar una reserva teniendo otra activa. El back-end está pronto a finalizarse, queda por terminar el front-end.</p>
-                                    <p>Las herramientas utilizadas hasta el momento son el framework de Django, SQL, HTML5 y CSS.</p>
-                                    <a href="https://footballreservation.herokuapp.com">> Visitar la página (en desarrollo)</a> <br>
-                                    <a href="https://github.com/feaus/foot_res/">> Ver el código fuente</a>
+                                    {% if art.title == "Reserva de canchas de fútbol" %}
+                                        <a href="{{ art.live_view }}">> Visitar la página (en desarrollo)</a> <br>
+                                    {% elif art.title == "Página personal" %}
+                                        <a href="{{ art.live_view }}" class="unavailable">> Visitar la página</a> <br>
+                                    {% else %}
+                                        <a href="{{ art.live_view }}">> Visitar la página</a> <br>
+                                    {% endif %}
+
+                                    <a href="{{ art.source_code }}">> Ver el código fuente</a>
                                 </section>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            {% endfor %}
 
             <article class="container box style3" id="email">
                 <header>
