@@ -1,1 +1,1 @@
-web: gunicorn my_new_site.wsgi
+web: gunicorn portfolio_page.wsgi
