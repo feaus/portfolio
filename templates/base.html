@@ -16,7 +16,7 @@
         <title>Federico Auster</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <meta property='og:image' content='{{ article.1.image.url }}'/>
+        <meta property='og:image' content="{% static 'og_image.jpg' %}"/>
         <meta property='og:title' content='Portfolio'/>
         <link rel="stylesheet" href="{% static 'main.css' %}">
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'logo_icon.ico' %}">
@@ -26,7 +26,6 @@
         <div id="loader"></div>
 
         <div style="display: none;" id="myDiv" class="animate-bottom"></div>
-
             <section id="header">
                 <header>
                     <h1>Federico Auster</h1>
